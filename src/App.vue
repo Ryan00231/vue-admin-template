@@ -5,7 +5,17 @@
 </template>
 
 <script>
+import { addWatermark } from './utils/watermark';
+
 export default {
-  name: 'App'
-}
+  name: 'App',
+  mounted() {
+    // alert(this.$getCookie());
+    const userCookie = this.$getCookie();
+    Object.keys(userCookie).forEach(key => {
+      console.log(userCookie);
+    });
+    addWatermark(this.$getCookie('userName'));
+  }
+};
 </script>
