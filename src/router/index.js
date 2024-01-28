@@ -73,6 +73,12 @@ export const constantRoutes = [
         name: 'Chart',
         component: () => import('@/views/chart/index'),
         meta: { title: 'Chart', icon: 'user' }
+      },
+      {
+        path: 'draggable',
+        name: 'Draggable',
+        component: () => import('@/views/draggable/index'),
+        meta: { title: 'Draggable', icon: 'user' }
       }
     ]
   },
